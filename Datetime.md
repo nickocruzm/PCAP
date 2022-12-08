@@ -53,3 +53,31 @@ d = date.fromtimestamp(impact_timestamp)
 print("Date:", d)
 
 ```
+
+### date.fromisoformat('YYYY-MM-DD')
+
+(Python version 3.7)
+
+Allows us to make a date obejct a string (format compliant with **ISO 8601** standard) argument.
+
+Be sure to add 0 before a month or a day that is expressed by a number less than 10.
+
+### ISO 8601
+
+standard defines how the date and time are represented.
+
+### Date and time operations
+
+The **timedelta** in the datetime module that was created for just such a purpose.
+
+To create a timedelta object, we neeed to perform subtraction on date or datetime objects.
+
+```python
+from datetime import date, datetime
+
+d1 = date(2022,11,4)
+d2 = date(2019, 11, 4)
+
+print(d1 - d2)
+
+```
