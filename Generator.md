@@ -75,3 +75,4 @@ Below is an example of a generator.
 ```
 
 The above code looks like a function however it should not be invoked explicitly. Once the yield keyword is used, it is no longer a function; it is a generators object. The invocation will return the objects identifier.
+
