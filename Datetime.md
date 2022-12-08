@@ -35,7 +35,7 @@ day parameter (d):
 
 This is when the counting of time began on Unix systems.
 To create a date from a timestamp, we must pass a Unix timestamp to **fromtimestamp** method.
-**time()** returns the number of seconds from January 1, 1970 to the current moment in the form of a float number. 
+**time()** returns the number of seconds from January 1, 1970 to the current moment in the form of a float number.
 In Unix and Windows systems, leap seconds aren't counted.
 
 A different way to show when mother threw a zapato at you.
