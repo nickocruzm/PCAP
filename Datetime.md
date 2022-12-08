@@ -1,4 +1,4 @@
-# datetime
+# DateTime
 
 ## date
 
@@ -30,3 +30,26 @@ month parameter (m):
 
 day parameter (d):
     $ 1 \leq d \leq $ (last day of month)
+
+### Unix epoch
+
+This is when the counting of time began on Unix systems.
+To create a date from a timestamp, we must pass a Unix timestamp to **fromtimestamp** method.
+**time()** returns the number of seconds from January 1, 1970 to the current moment in the form of a float number. 
+In Unix and Windows systems, leap seconds aren't counted.
+
+A different way to show when mother threw a zapato at you.
+
+```python
+
+from datetime import date
+import time
+
+impact_timestamp = time.time()
+print("Timestamp: ", impact_timestamp)
+
+d = date.fromtimestamp(impact_timestamp)
+
+print("Date:", d)
+
+```
