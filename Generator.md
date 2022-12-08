@@ -1,6 +1,6 @@
 # Generators
 
-A generator returns a series of values. Generally, implicity invoked more than once.
+A generator returns a series of values. Generally, implicity invoked more than once. It is capable of save and restore its state between subsequent invocations.
 
 For example the range() function is a generator.
 
@@ -56,3 +56,22 @@ class Fib:
 for i in Fib(10):
     print(i)
 ```
+
+## YIELD
+
+The problem mentioned earlier, about making a function which acts like the range function. The problem with implementing it in the fashion that we normally implement functions is that we are not able to save and restore its state between susequent invocations.
+
+Below is an example of a generator.
+
+```python
+
+    def fun(n):
+        for i in range(n):
+            yield i
+
+    for v in fun(5):
+        print(v)
+
+```
+
+The above code looks like a function however it should not be invoked explicitly. Once the yield keyword is used, it is no longer a function; it is a generators object. The invocation will return the objects identifier.
