@@ -136,4 +136,3 @@ A change from brackets to parantheses, of a list comprehension, will produce a g
         print(v, end=" ")
     print()
 ```
-
