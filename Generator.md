@@ -76,3 +76,64 @@ Below is an example of a generator.
 
 The above code looks like a function however it should not be invoked explicitly. Once the yield keyword is used, it is no longer a function; it is a generators object. The invocation will return the objects identifier.
 
+We can use the `list()` constructor, where we pass in a generator as an argument, will populate the list with elements that the function yield.
+
+```python
+def fibonacci(n):
+
+    f1 = f2 = 1             # f1 = 1 , f2 = 1
+    for i in range(n):      # while (0 <= i < n), for i in [0,n)
+        if i in [0, 1]:         # if i = 0 or i = 1 yeld 1.
+            yield 1
+        else:               
+            n = f1 + f2     #  assign the sum of f1 + f2 
+            f2, f1 = f1, n  # then assign f2 = f1  , f1 = n
+            yield n        # yield n
+
+fibs = list(fibonacci(10))
+print(fibs)
+
+```
+
+### conditional expression
+
+a way of selecting one of two different values based on the result of a Boolean expression.
+
+'(expression_one) if (condition) else (expression_two)'
+
+**NOT** a conditional instruction, it is actually an operator.
+
+values provided is equal to `expression_one` when the condition is True`expression_two` otherwise.
+
+```python
+
+    the_list = []
+    for x in range(10):
+        the_list.append(1 if x % 2 == 0 else 0)
+    
+    print(the_list)
+
+```
+
+The above code can be made into a list comprehension.
+
+``` python
+
+the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
+
+print(the_list)
+
+```
+
+A change from brackets to parantheses, of a list comprehension, will produce a generator.
+
+```python
+    for v in [1 if x % 2 == 0 else 0 for x in range(10)]:
+        print(v, end=" ")
+    print()
+
+    for v in (1 if x % 2 == 0 else 0 for x in range(10)):
+        print(v, end=" ")
+    print()
+```
+
