@@ -39,11 +39,12 @@ except IOError as e:
 
 ```
 
-### readline
+### readline and readlines
 
-readline will return a string of the line of input
-else it will return an empty string
+**readline** will read one line and return it as a string. If it is currently at the end of file, else it will return an empty string
 
+**readlines** tries to read all the file contnets, and returns a list of strings, one element per file line (A[0] = line1,
+A[i] = line(i+1) ). We are also able to pass in an **maximum accepted input buffer** integer(n) argurment into the readlines method. Doing so will only read (n) lines of a file. When the EOF is reached, readlines returns and empty list.
 
 ## idk the name yet
 
