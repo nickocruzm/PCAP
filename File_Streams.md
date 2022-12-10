@@ -1,5 +1,45 @@
 # File Streams
 
+## Working with text files
+
+we are only working with plain text files. The encoding of text files depend on the O.S, for the examples below we assume the encoding to be 'UTF-8'.
+
+A simple implementation
+
+```python
+
+    stream = open('fileName.txt','rt',encoding='utf-8')
+
+    print(stream.read())
+
+```
+
+### Routine 1
+
+```python
+from os import strerror
+
+try:
+    count = 0
+    s = open('file.txt','rt')
+    ch = s.read(1) # reads one character
+
+    while(ch != ''):
+        print(ch, end='')
+        count += 1
+        ch = s.read(1)
+    
+    s.close()
+
+    print('character count: ', count)
+
+except IOError as e:
+
+    print("I/O ERROR occured: ", strerror(e.errno))
+```
+
+## idk the name
+
 Portability issues are still presently a problem
 
 When the stream is open, its contents are taken as-is, without any conversion, no bytes are added or omitted.
