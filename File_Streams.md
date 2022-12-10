@@ -36,9 +36,16 @@ try:
 except IOError as e:
 
     print("I/O ERROR occured: ", strerror(e.errno))
+
 ```
 
-## idk the name
+### readline
+
+readline will return a string of the line of input
+else it will return an empty string
+
+
+## idk the name yet
 
 Portability issues are still presently a problem
 
