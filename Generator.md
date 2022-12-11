@@ -136,3 +136,26 @@ A change from brackets to parantheses, of a list comprehension, will produce a g
         print(v, end=" ")
     print()
 ```
+
+## Lambdas
+
+```python
+    doSomething = lambda parameter1,parameter2: parameter1 + parameter2
+```
+
+We can use lambas as arguments passed into function, that will map the values according to the function
+
+```python
+
+    def print_function(args,fun):
+        for x in args:
+            print('f( ', x, ') =', fun(x), sep='')
+
+    print_function([x for x in range(-2,3)], lambda x: 2 * x**2 - 4 * x + 2)
+
+```
+
+In the snippet above we passed in a list comprehension and a lambda expression. The elements in the list will be passed into and evaluated by the lambda.
+
+From a design perspective
+    Notice how the `print_function()` has an independent purpose/action. That no matter what the arguments are, the print function will do its best to print whatever it is given. Its nice and simple. Each function having a strict role, does greatly simplify reading code.
