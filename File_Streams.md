@@ -1,5 +1,28 @@
 # File Streams
 
+## Modes
+
+read mode: allows read operations only
+write mode: write operations only
+update mode: both reads and writes
+
+exceptions raised if these are not used properly
+*UnsupportedOperation*, *OSError*, *ValueError*. Each of these exceptions are from the **io** module
+
+
+## File Handles
+
+an object of an adequate class is created when you open the file and annihilate it at the time of closing.
+
+The operations we are allowed to use are determined by the way we open them.
+
+a handler object is created when a file is opened and when its life cycle comes to an end when we decide to close that file.
+
+The object created, at the time of openning, comes from 
+**IOBase** and is of the three **RawIOBase**,**BufferedIOBase** , **TextIOBase**
+
+We will only focus on the streams represented by **BufferIOBase** and **TextIOBase**
+
 ## Working with text files
 
 we are only working with plain text files. The encoding of text files depend on the O.S, for the examples below we assume the encoding to be 'UTF-8'.
