@@ -159,3 +159,22 @@ In the snippet above we passed in a list comprehension and a lambda expression. 
 
 From a design perspective
     Notice how the `print_function()` has an independent purpose/action. That no matter what the arguments are, the print function will do its best to print whatever it is given. Its nice and simple. Each function having a strict role, does greatly simplify reading code.
+
+
+## map()
+
+```python
+
+map(function,list)
+
+```
+
+2nd argument must be able to be iterated.
+
+can accept more than two arguments.
+
+## filter()
+
+filters its second argument while being guided by directions flowing from the function specified as the first argument.
+
+In the example given the first argumrnt is a lambda expression that evaluate if an element is even. The filter function will filter out any of the elments contained in the iterable second argument that are odd and less than x.
