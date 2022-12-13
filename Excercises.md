@@ -1,6 +1,10 @@
 # Excercises
 
-## 1) What is the expected output?
+
+## 4.1
+### Excercises 1
+
+What is the expected output?
 
 ```python
 class Vowels:
@@ -25,7 +29,7 @@ for v in vowels:
 
 ```
 
-## Excercise 2
+### Excercise 2
 
 write a lambda function, setting the least significant bit of its integer argument, and apply it to the map() function to produce the string 1 3 3 5 on the console.
 
@@ -37,7 +41,7 @@ print(even_list)
 
 ```
 
-## Excercise 3
+### Excercise 3
 
 What is the expected output of the following code?
 
@@ -54,11 +58,49 @@ print(stars("And Now for Something Completely Different"))
 
 ```
 
-
-## Answers
+## 4.1 Answers
 
 1) output: a e i o u y
 
 2) map(lambda x: x | 1, any_list)
 
 3) output: "And*Now*for*Something*Completely*Different"
+
+## 4.2
+
+### Excercise 1)
+
+How do you encode an open() function's mode argument value if you're going to create a new text file to only fill it with an article?
+
+### Excercise 2)
+
+what is the meaning of the value represented by errno.EACESS ?
+
+### Excercise 3)
+
+Expected output of the following code?
+
+```python
+
+import errno
+
+try:
+    stream = open("file", "rb")
+    print("exists")
+    stream.close()
+except IOError as error:
+    if error.errno == errno.ENOENT:
+        print("absent")
+    else:
+        print("unknown")
+
+
+```
+
+
+
+## 4.2 Answers
+
+1) "wt" or "w"
+2) Permission denied
+3) absent
