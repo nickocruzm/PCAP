@@ -192,3 +192,22 @@ errno.ENOSPC -> No space left on device
 
 When there is no free space on the media
 
+
+### Simplify Error handling code
+
+from the os module there is a function which takes in the error number as the argument, which then returns a string describing the meaning of the error number.
+
+```python
+
+from os import strerror
+
+try:
+    s = open("c:/users/user/Desktop/file.txt", "rt")
+    # Actual processing goes here.
+    s.close()
+except Exception as exc:
+    print("The file could not be opened:", strerror(exc.errno))
+
+
+```
+
