@@ -23,6 +23,10 @@ The object created, at the time of openning, comes from
 
 We will only focus on the streams represented by **BufferIOBase** and **TextIOBase**
 
+## Portability
+
+Depending on the operating system being used, there may be unsupported formatting while reading / saving data. For example, Windows uses the '/r/t' character to denote the end of a line while Unix/Linux like systems use '/n' these differences can lead to an error being rasied when programs and data are being transferred between different operating systems.
+
 ## Working with text files
 
 we are only working with plain text files. The encoding of text files depend on the O.S, for the examples below we assume the encoding to be 'UTF-8'.
@@ -95,3 +99,96 @@ mode and encoding args may be omitted. Each have assumed default arguments, assu
 ```python
     stream = open(file,mode = 'r', encoding = None)
 ```
+
+## File Modes
+
+'r': Permitted to read
+'w': Permitted to write
+'a': Permitted to append
+'r+': Permitted to read and update
+'r+t': Permitted to read and update text file
+'r+b': Permitted to read and update binary file
+
+'w+' : Permitted to write and update
+'w+t': Permitted to write and upate text file
+'w+b': Permitted to write and update binary file
+'x'  : Exlcusively creates file
+
+If file is not in append mode then the pointer on where to read or write will always start at the first byte of the file. In other words it will overwrite
+previous work. If append is used, then the pointer starts at the end of file and will add to the previous work.
+
+
+### Sys
+
+Importing the sys module will pre-open the three streams 
+
+```python
+import sys
+
+sys.stdin
+sys.stdout
+sys.stderr
+
+```
+
+The seperation of these streams gives the possibility of redirecting information to different targets.
+
+### Sys.stdin
+
+This stream is normally associated with the keyboard. pre-opened for reading
+
+The input() function reads data from stdin
+
+### sys.stdout
+
+stream is normally associated with the screen, pre-opened for writing
+
+The print() funciton outputs the data to the stdout stream
+
+### sys.stderr
+
+Standard error output, associated with the screen where the running program should send information on the errors encountered during its work.
+
+### Closing streams
+
+The last operation performed on a stream should be closing
+This doesn't inclued (stdin, stdout and stderr), which will all be automatically closed.
+
+Close() method can fail. When attempting to transfer data to a physcial device, there is a possibility that the data sent to the device has not been successfully transfered by the time the file is closed.
+
+### Diagnosis
+
+IOError, equipped with a property named errno
+
+errno.EACCES -> Permission denied
+
+The error occurs when attempting to open a file that only has read only permission.
+
+errno.EBADF -> Bad file number
+
+to operate with an unopened stream
+
+errno.EEXIST -> File exists
+
+to rename a file with its previous name
+
+errno.EFBIG -> File too large
+
+When trying to create a file that is larger than the maximum allowed.
+
+errno.EISDIR -> Is a directory
+
+treat a directory name as the name of an ordinary file.
+
+errno.EMFILE -> Too many open files
+
+when attempting to open more streams than acceptable for operating system.
+
+errno.ENOENT -> No such file or dir
+
+when attempting to access a non-existent file/dir
+
+errno.ENOSPC -> No space left on device
+
+When there is no free space on the media
+
