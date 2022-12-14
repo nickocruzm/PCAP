@@ -217,3 +217,31 @@ except Exception as exc:
 expects just one argument. No newline is added to the argument, so that character must be added voluntarily.
 
 mode = 'w': ensures that the file will be created from scratch even if it exists. Puts ten lines into a file by default.
+
+stderr stream, is always opened implicitly
+
+```python
+sys.stderr.write("Error message")
+```
+
+**Where does it write to ?**
+
+
+## Amorphous data
+
+data that lacks form, just a series of bytes
+
+## bytearray
+
+its an aray containing (amorphous) bytes.
+
+```python
+data = bytearray(10)
+```
+
+fills whole array with zeros
+
+They are mutable, must be in a range 0 to 255 inclusive else ValueError is raised)
+
+how to write a byte array to a binary file, when we don't want to save its readable representation we want to write a one to one copy of the physical memory content byte to byte.
+

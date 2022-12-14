@@ -11,6 +11,15 @@ try:
             f.write("line #" + str(i) + '\n')
 except IOError as e:
     print(strerror(e.errno))
+    
 
 
+# Byte array
+
+data = bytearray(10)
+
+for i in range(len(data)):
+    data[i] = 10 - i
+    for bit in data:
+        print(hex(bit))
 
