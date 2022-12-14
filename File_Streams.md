@@ -211,3 +211,9 @@ except Exception as exc:
 
 ```
 
+
+## Write()
+
+expects just one argument. No newline is added to the argument, so that character must be added voluntarily.
+
+mode = 'w': ensures that the file will be created from scratch even if it exists. Puts ten lines into a file by default.

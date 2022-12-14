@@ -97,8 +97,6 @@ except IOError as error:
 
 ```
 
-
-
 ## 4.2 Answers
 
 1) "wt" or "w"
