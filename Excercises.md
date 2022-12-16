@@ -102,3 +102,45 @@ except IOError as error:
 1) "wt" or "w"
 2) Permission denied
 3) absent
+
+
+
+## 4.3
+
+### Excercise 1
+
+what do we expect fromt the readlines() method when the stream is associated with an empty file?
+
+### Excersice 2
+
+What is the following intended to do?
+
+```python
+for line in open("file", "rt"):
+    for char in line:
+        if char.lower() not in "aeiouy ":
+            print(char, end='')
+```
+
+
+
+## Exercise 3
+
+You're going to process a bitmap stored in a file named image.png, and you want to read its contents as a whole into a bytearray variable named image. Add a line to the following code to achieve this goal.
+
+```python
+try:
+    stream = open("image.png", "rb")
+    # Insert a line here.
+    stream.close()
+except IOError:
+    print("failed")
+else:
+    print("success")
+```
+
+## 4.3 Answers
+
+1) an empty string (zero-length list)
+2) Copies file's contents to the console ignoring all vowels.
+3) image = bytearray(stream.read())
