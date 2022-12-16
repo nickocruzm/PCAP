@@ -1,0 +1,21 @@
+
+User Input...
+    The only information provided by a user is the name of a file.
+The easiest method is just using the built-in input method. 
+
+Reading in the file...
+
+    We need to open the given file (from usr).
+
+    we need to read every character of the file. 
+
+    increase the count of every character that is read.
+
+    Using a dictionary we can make the characters of the alphabet the keys
+so when we read in the character we can use it as the key to increase the value of that key by 1.
+
+    Beware of the case of character. to prevent not counting upper case letters
+we just need to pass in the lower case char as the key.
+
+
+...Can I create the dictionary as I read in the file?
