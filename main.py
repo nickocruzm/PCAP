@@ -22,4 +22,13 @@ for i in range(len(data)):
     data[i] = 10 - i
     for bit in data:
         print(hex(bit))
+        
+
+class A:
+    def __init__(self):
+        pass
+    
+
+a = A()
+
 

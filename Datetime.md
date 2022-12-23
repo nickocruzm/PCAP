@@ -81,3 +81,7 @@ d2 = date(2019, 11, 4)
 print(d1 - d2)
 
 ```
+
+## Event logging
+
+from the datetime module we are able to determine when an error occurs. When creating logs, you can specify the date and time format;

@@ -37,7 +37,6 @@ inner() may be invoked only from within outer().
 
 "...inner() is outer()'s private tool..."
 
-
 a function has access to the arguments passed in and also to Global variables. When we declare inner() inside of outer(). Inner has access to the local variable of outer. This concept seems to be refered to as a **frozen environment**
 
 The outer() function returns the inner() function itself; more precisely it returns a copy of the inner function.

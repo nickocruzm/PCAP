@@ -139,8 +139,9 @@ else:
     print("success")
 ```
 
+
 ## 4.3 Answers
 
 1) an empty string (zero-length list)
 2) Copies file's contents to the console ignoring all vowels.
-3) image = bytearray(stream.read())
+3) image = bytearray(stream.read())j
