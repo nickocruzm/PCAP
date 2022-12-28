@@ -178,3 +178,4 @@ can accept more than two arguments.
 filters its second argument while being guided by directions flowing from the function specified as the first argument.
 
 In the example given the first argumrnt is a lambda expression that evaluate if an element is even. The filter function will filter out any of the elments contained in the iterable second argument that are odd and less than x.
+
